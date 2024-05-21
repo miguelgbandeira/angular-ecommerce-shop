@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../shared/models/product.model';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
   cartList: Product[] = [];
+  cartListChanged = new Subject<Product[]>();
 
   constructor() {}
 
@@ -23,5 +25,6 @@ export class CartService {
     } else {
       this.cartList = [...this.cartList, { ...item, quantity: quantityToAdd }];
     }
+    this.cartListChanged.next(this.cartList);
   }
 }
