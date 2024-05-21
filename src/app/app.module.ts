@@ -10,6 +10,7 @@ import { NavComponent } from './shared/nav/nav.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductCardComponent } from './products/product-card/product-card.component';
+import { QuantityInputComponent } from './products/product-card/quantity-input/quantity-input.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ProductCardComponent } from './products/product-card/product-card.compo
     NavComponent,
     FooterComponent,
     ProductCardComponent,
+    QuantityInputComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

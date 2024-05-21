@@ -1,0 +1,14 @@
+<div class=container>
+  <button class=btn (click)="handleDecrement()">
+    -
+  </button>
+  <input
+    class="input"
+    type="number"
+    (change)="onChange($event.target)"
+    [value]="value"
+  />
+  <button class="btn" (click)="handleIncrement()" >
+    +
+  </button>
+</div>

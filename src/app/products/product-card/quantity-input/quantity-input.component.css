@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  gap: 0.2em;
+}
+
+.btn {
+  background: var(--light-purple);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  width: 1.5em;
+  height: 1.5em;
+  font: inherit;
+  font-weight: bolder;
+  cursor: pointer;
+  outline: inherit;
+  text-align: center;
+
+  &:active {
+    background: var(--main-purple);
+  }
+
+  &:focus {
+    border: 2px solid var(--main-purple);
+  }
+
+  &:hover {
+    border: 1px solid var(--main-purple);
+  }
+}
+
+.input {
+  border: 1px solid var(--cadet-grey);
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.2em;
+  max-width: 100px;
+
+  &:active {
+    background: var(--main-purple);
+  }
+}
