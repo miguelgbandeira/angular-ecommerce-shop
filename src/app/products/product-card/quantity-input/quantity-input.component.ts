@@ -17,7 +17,7 @@ export class QuantityInputComponent {
   }
 
   onChange(target: any) {
-    console.log(target.value);
+    this.value = +target.value;
   }
 
   handleIncrement() {

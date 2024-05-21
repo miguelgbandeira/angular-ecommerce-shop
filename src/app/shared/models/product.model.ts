@@ -6,5 +6,6 @@ export class Product {
     public image: string,
     public rating: { rate: number; count: number },
     public description?: string,
+    public quantity: number = 0,
   ) {}
 }

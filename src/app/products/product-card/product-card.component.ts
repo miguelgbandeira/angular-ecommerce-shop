@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { Product } from '../../shared/models/product.model';
+import { QuantityInputComponent } from './quantity-input/quantity-input.component';
+import { CartService } from '../../cart/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -8,5 +10,12 @@ import { Product } from '../../shared/models/product.model';
 })
 export class ProductCardComponent {
   @Input() product!: Product;
-  constructor() {}
+  @ViewChild(QuantityInputComponent) quantityInput!: QuantityInputComponent;
+
+  constructor(private cartService: CartService) {}
+
+  onAddToCart() {
+    this.cartService.addToCart(this.product, this.quantityInput.value);
+    console.log(this.cartService.cartList);
+  }
 }
