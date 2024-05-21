@@ -2,9 +2,9 @@ export class Product {
   constructor(
     public id: number,
     public title: string,
-    public price: string,
+    public price: number,
     public image: string,
-    public rating: { rate: string; count: number },
+    public rating: { rate: number; count: number },
     public description?: string,
   ) {}
 }
