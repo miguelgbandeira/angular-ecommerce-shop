@@ -16,6 +16,7 @@ li {
 
 .nav-title {
   color: var(--main-purple);
+  cursor: pointer;
 }
 
 .nav-links {
@@ -25,4 +26,11 @@ li {
 
 .link {
   margin: 1em;
+  cursor: pointer;
+}
+
+.active-link {
+  text-decoration: underline;
+  text-decoration-color: var(--light-purple);
+  text-decoration-thickness: 5px;
 }

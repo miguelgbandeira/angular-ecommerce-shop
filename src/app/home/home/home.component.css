@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+
+  @media (max-width: 900px) {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.heroTitle {
+  font-size: 4em;
+  margin-bottom: 0;
+  color: var(--main-purple);
+  font-weight: bolder;
+}
+
+.subtitle {
+  font-size: 2em;
+  margin-top: 0.5em;
+  color: var(--light-blue);
+  margin-bottom: 0.5em;
+}
+
+.image {
+  max-width: 500px;
+  @media (max-width: 900px) {
+    max-width: 250px;
+  }
+}
+
+.button {
+  @media (max-width: 900px) {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
