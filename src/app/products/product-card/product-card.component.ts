@@ -14,7 +14,8 @@ export class ProductCardComponent {
 
   constructor(private cartService: CartService) {}
 
-  onAddToCart() {
+  onAddToCart(event: Event) {
+    event.stopPropagation();
     this.cartService.addToCart(this.product, this.quantityInput.value);
   }
 }

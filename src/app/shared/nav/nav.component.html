@@ -3,6 +3,6 @@
   <ul class="nav-links">
     <li class="link" [routerLink]="'home'">home</li>
     <li class="link" [routerLink]="'products'">products</li>
-    <li class="link" [routerLink]="'cart'">cart</li>
+    <li class="link" [routerLink]="'cart'">cart {{counter > 0 ? "(" + counter + " ) " : ""}}</li>
   </ul>
 </div>

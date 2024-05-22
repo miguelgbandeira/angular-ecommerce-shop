@@ -10,7 +10,8 @@ export class QuantityInputComponent {
   max = 100;
   value = 1;
 
-  handleDecrement() {
+  handleDecrement(event: Event) {
+    event.stopPropagation();
     if (this.value > this.min) {
       this.value -= 1;
     }
@@ -20,7 +21,8 @@ export class QuantityInputComponent {
     this.value = +target.value;
   }
 
-  handleIncrement() {
+  handleIncrement(event: Event) {
+    event.stopPropagation();
     if (this.value < this.max) {
       this.value += 1;
     }
