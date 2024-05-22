@@ -1,0 +1,23 @@
+.item-card {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+  border-top: 1px solid black;
+  padding: 1em;
+
+  &:first-of-type {
+    border-top: none; /* Remove border for the first item */
+  }
+}
+
+.card-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-information-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
