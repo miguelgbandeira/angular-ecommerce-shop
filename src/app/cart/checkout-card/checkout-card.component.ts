@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../../shared/models/product.model';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-checkout-card',
@@ -8,4 +9,10 @@ import { Product } from '../../shared/models/product.model';
 })
 export class CheckoutCardComponent {
   @Input() product!: Product;
+
+  constructor(private cartService: CartService) {}
+
+  onRemove() {
+    this.cartService.removeItemFromCart(this.product);
+  }
 }

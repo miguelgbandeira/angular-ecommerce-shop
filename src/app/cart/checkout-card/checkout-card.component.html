@@ -9,7 +9,7 @@
     </div>
     <div>
       <div>Quantity: {{ product.quantity }}</div>
-      <button>Remove</button>
+      <app-button (click)="onRemove()" [text]="'Remove'" ></app-button>
     </div>
   </div>
 </div>

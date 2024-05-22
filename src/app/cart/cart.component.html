@@ -11,6 +11,6 @@
       <p>Total:</p>
       <p>{{totalPrice | currency}}</p>
     </div>
-    <button>Checkout</button>
+    <app-button (click)="onCheckout()" [text]="'Checkout'" [isDisabled]="cartList.length === 0"></app-button>
   </div>
 </div>

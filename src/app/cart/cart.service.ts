@@ -27,10 +27,27 @@ export class CartService {
     } else {
       this.cartList = [...this.cartList, { ...item, quantity: quantityToAdd }];
     }
+    this.calculateTotalValue();
+    this.cartListChanged.next(this.cartList);
+  }
+
+  removeItemFromCart(item: Product) {
+    this.cartList = this.cartList.filter((cartItem) => cartItem !== item);
+    this.calculateTotalValue();
+    this.cartListChanged.next(this.cartList);
+  }
+
+  calculateTotalValue() {
     this.totalPrice = this.cartList.reduce(
       (total, product) => total + product.price * product.quantity,
       0,
     );
+    this.totalPriceChanged.next(this.totalPrice);
+  }
+
+  resetCartList() {
+    this.cartList = [];
+    this.totalPrice = 0;
     this.cartListChanged.next(this.cartList);
     this.totalPriceChanged.next(this.totalPrice);
   }

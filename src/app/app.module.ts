@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductCardComponent } from './products/product-card/product-card.component';
 import { QuantityInputComponent } from './products/product-card/quantity-input/quantity-input.component';
 import { CheckoutCardComponent } from './cart/checkout-card/checkout-card.component';
+import { ButtonComponent } from './shared/button/button.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CheckoutCardComponent } from './cart/checkout-card/checkout-card.compon
     ProductCardComponent,
     QuantityInputComponent,
     CheckoutCardComponent,
+    ButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

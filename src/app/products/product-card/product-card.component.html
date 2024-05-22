@@ -9,6 +9,6 @@
   <p class="price">{{product.price | currency}}</p>
   <div class="button-container">
     <app-quantity-input></app-quantity-input>
-    <button (click)="onAddToCart()">Add to cart</button>
+    <app-button (click)="onAddToCart()" [text]="'Add to cart'"></app-button>
   </div>
 </div>

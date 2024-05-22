@@ -5,9 +5,24 @@ li {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 0 2em;
+  padding: 0.5em;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+}
+
+.nav-title {
+  color: var(--main-purple);
 }
 
 .nav-links {
   display: flex;
-  gap: 0.5em
+  justify-content: space-around;
+}
+
+.link {
+  margin: 1em;
 }

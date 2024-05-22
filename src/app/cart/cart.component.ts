@@ -33,4 +33,11 @@ export class CartComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.subscriptions.forEach((sub) => sub.unsubscribe());
   }
+
+  onCheckout() {
+    alert(`
+    Thank you for your order!
+    We hope to see you soon!`);
+    this.cartService.resetCartList();
+  }
 }
