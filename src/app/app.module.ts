@@ -13,6 +13,7 @@ import { ProductCardComponent } from './products/product-card/product-card.compo
 import { QuantityInputComponent } from './products/product-card/quantity-input/quantity-input.component';
 import { CheckoutCardComponent } from './cart/checkout-card/checkout-card.component';
 import { ButtonComponent } from './shared/button/button.component';
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ButtonComponent } from './shared/button/button.component';
     QuantityInputComponent,
     CheckoutCardComponent,
     ButtonComponent,
+    ProductDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

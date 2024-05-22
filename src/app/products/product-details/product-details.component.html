@@ -1,0 +1,14 @@
+<div class="flex-container">
+  <div>
+    <img class="image" [src]="product.image" alt="{{product.title}}"/>
+  </div>
+  <div class="info-container">
+    <h1>{{product.title}}</h1>
+    <h2>{{product.price | currency}}</h2>
+    <h4>{{product.description}}</h4>
+    <div class="buttons-container">
+      <app-quantity-input></app-quantity-input>
+      <app-button (click)="onAddToCart()" [text]="'Add to cart'"></app-button>
+    </div>
+  </div>
+</div>
