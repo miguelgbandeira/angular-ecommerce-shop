@@ -7,7 +7,9 @@ import { Subject } from 'rxjs';
 })
 export class CartService {
   cartList: Product[] = [];
+  totalPrice = 0;
   cartListChanged = new Subject<Product[]>();
+  totalPriceChanged = new Subject<number>();
 
   constructor() {}
 
@@ -25,6 +27,11 @@ export class CartService {
     } else {
       this.cartList = [...this.cartList, { ...item, quantity: quantityToAdd }];
     }
+    this.totalPrice = this.cartList.reduce(
+      (total, product) => total + product.price * product.quantity,
+      0,
+    );
     this.cartListChanged.next(this.cartList);
+    this.totalPriceChanged.next(this.totalPrice);
   }
 }

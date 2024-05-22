@@ -11,6 +11,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductCardComponent } from './products/product-card/product-card.component';
 import { QuantityInputComponent } from './products/product-card/quantity-input/quantity-input.component';
+import { CheckoutCardComponent } from './cart/checkout-card/checkout-card.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { QuantityInputComponent } from './products/product-card/quantity-input/q
     FooterComponent,
     ProductCardComponent,
     QuantityInputComponent,
+    CheckoutCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

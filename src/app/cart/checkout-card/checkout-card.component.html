@@ -1,0 +1,15 @@
+<div class="item-card">
+  <div>
+    <img style="width: 100px" [src]="product.image" [alt]="product.title" />
+  </div>
+  <div class="card-information">
+    <div class="card-information-header">
+      <b>{{ product.title }}</b>
+      <div>{{ product.price | currency}}</div>
+    </div>
+    <div>
+      <div>Quantity: {{ product.quantity }}</div>
+      <button>Remove</button>
+    </div>
+  </div>
+</div>

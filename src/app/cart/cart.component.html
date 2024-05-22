@@ -1,13 +1,15 @@
 <div class="cart">
   <div>
     <h2>Your items:</h2>
-    <div></div>
+    <div>
+      <app-checkout-card *ngFor="let product of cartList" [product] = "product"></app-checkout-card>
+    </div>
   </div>
   <div class="summary-container">
     <h2>Summary:</h2>
     <div class="price">
       <p>Total:</p>
-      <p>0€</p>
+      <p>{{totalPrice | currency}}</p>
     </div>
     <button>Checkout</button>
   </div>
