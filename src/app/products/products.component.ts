@@ -7,18 +7,8 @@ import { Product } from '../shared/models/product.model';
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })
-export class ProductsComponent implements OnInit {
-  products: Product[] = [];
+export class ProductsComponent {
   constructor(private productsService: ProductsService) {}
 
-  ngOnInit(): void {
-    this.productsService.fetchProducts().subscribe(
-      (products) => {
-        this.products = products;
-      },
-      (error) => {
-        console.error(error);
-      },
-    );
-  }
+  products = this.productsService.products;
 }

@@ -1,5 +1,9 @@
 <div class="content">
   <div class="grid">
-    <app-product-card [routerLink]="['/products', prod.id]" *ngFor="let prod of products" [product]="prod"></app-product-card>
+    <app-product-card
+      [routerLink]="['/products', prod.id]"
+      *ngFor="let prod of products()"
+      [product]="prod"
+    ></app-product-card>
   </div>
 </div>
